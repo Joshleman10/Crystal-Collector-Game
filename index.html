@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gem Collector Game</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body background="assets/images/background.png" style =
+"height:100%; background-repeat:no-repeat; background-size:cover;">
+    <div id="game">
+        <h1 id="title">Gem Collector Game!</h1>
+        <h1 id="rules">Each gem has a different hidden value.<br>
+        Each time a gem is clicked, the secret value is added <br>
+        to your total.  Click the various gems in an attempt to <br>
+        equal the magic total coming from the lamp!<br>
+         If your total is higher than the master total...game over!
+        </h1>
+        <img id="lamp" src="assets/images/lamp.png">
+        <div id="mastertotal"></div>
+        <div id="smoke"><img src="assets/images/smoke.png"></div>
+        <div id="usertotal"></div>
+        <br><br>
+        <div id="wins">Total wins:</div>
+        <div id="losses">Total losses:</div>
+        <br><br>
+        <div class="gempics">
+            <img id="bluegem" src="assets/images/bluegem.png" BORDER ="0">
+            <img id="redgem" src="assets/images/redgem.png" BORDER ="0">
+            <img id="greengem" src="assets/images/greengem.png" BORDER ="0">
+            <img id="purplegem" src="assets/images/purplegem.png" BORDER ="0">
+        </div>    
+        <br>
+        <br>
+    </div> 
+    <script src="assets/game.js"></script>
+</body>
+</html>

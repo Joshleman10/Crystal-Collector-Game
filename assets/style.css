@@ -1,0 +1,82 @@
+#bluegem{
+    margin-top:-100px;
+    height:100px;
+    width:100px;
+    margin-left:5%;
+}
+#redgem{
+    margin-top:-100px;
+    height:100px;
+    width:100px;
+    margin-left:5%;
+}
+#greengem{
+    margin-top:-100px;
+    height:100px;
+    width:100px;
+    margin-left:5%;
+}
+#purplegem{
+    margin-top:-100px;
+    height:100px;
+    width:100px;
+    margin-left:5%;
+}
+#game{
+    font-family: 'Bellefair', serif;
+    color:gold;
+    margin-left:25%;
+}
+#title{
+    margin-left:10%;
+    font-size:50px;
+    text-decoration: underline;
+}
+body, html{
+    height:100%;
+}
+#mastertotal{
+font-size:40px;
+font-weight:bold;
+opacity: 0;
+display:inline;
+position: absolute;
+}
+#wins{
+font-size:25px;
+font-weight:bold;
+position: relative;
+top:-100px;
+display: inline;
+}
+#losses{
+font-size:25px;
+font-weight:bold;
+margin-left:200px;
+position: relative;
+top:-100px;
+display: inline;
+}
+#usertotal{
+font-size:25px;
+font-weight:bold;
+}
+#lamp{
+    height:100px;
+    display:inline;
+}
+#smoke img{
+    height:100px;
+    width:450px;
+    position: relative;
+    top:-150px;
+    margin-left:22%;
+    opacity:1;
+}
+#usertotal{
+    font-size:25px;
+    font-weight:bold;
+    position: relative;
+    top:-100px;
+    display: inline;
+}
