@@ -9,90 +9,105 @@ var red = $("#redgem");
 var purple = $("#purplegem");
 var green = $("#greengem");
 
-function startGame(){
+function startGame() {
+    $("#mastertotal").animate({
+        opacity: '1'
+    }, 3000);
 
-    $("#mastertotal").show().animate({
-        opacity: '1'}, 3000);
-    
-    $("#smoke").show().animate({
-        opacity: '0'}, 2000);
+    $("#smoke").animate({
+        opacity: '0'
+    }, 2000);
 
     playerTotal = 0;
     $("#usertotal").text("Your current total is: " + playerTotal);
 
-    targetNumber = Math.floor((Math.random()*120)+19);
+    targetNumber = Math.floor((Math.random() * 120) + 19);
     $("#mastertotal").text("The magic total is... " + targetNumber);
 
-    blue = numberOptions[Math.floor(Math.random()*numberOptions.length)];
-    red = numberOptions[Math.floor(Math.random()*numberOptions.length)];
-    purple = numberOptions[Math.floor(Math.random()*numberOptions.length)];
-    green = numberOptions[Math.floor(Math.random()*numberOptions.length)];
+    blue = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+    red = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+    purple = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+    green = numberOptions[Math.floor(Math.random() * numberOptions.length)];
 
     console.log(blue);
 }
 
-function gemClicks(){
+function gemClicks() {
 
-    $("#bluegem").on("click", function() {
+    $("#bluegem").on("click", function () {
         playerTotal += blue;
-    
+
         $("#usertotal").text("Your current total is: " + playerTotal);
-    
+
         console.log(blue);
         console.log(playerTotal);
-    
-        roundOver();
-        });
 
-    $("#redgem").on("click", function() {
+        roundOver();
+    });
+
+    $("#redgem").on("click", function () {
         playerTotal += red;
-    
+
         $("#usertotal").text("Your current total is: " + playerTotal);
-    
+
         console.log(red);
         console.log(playerTotal);
-    
+
         roundOver();
-        });
-    
-    $("#greengem").on("click", function() {
+    });
+
+    $("#greengem").on("click", function () {
         playerTotal += green;
-        
+
         $("#usertotal").text("Your current total is: " + playerTotal);
-        
+
         console.log(green);
         console.log(playerTotal);
-        
-        roundOver();
-        }); 
 
-    $("#purplegem").on("click", function() {
+        roundOver();
+    });
+
+    $("#purplegem").on("click", function () {
         playerTotal += purple;
-            
+
         $("#usertotal").text("Your current total is: " + playerTotal);
-            
+
         console.log(purple);
         console.log(playerTotal);
-            
+
         roundOver();
-        });           
-    }
+    });
+}
 
-function roundOver(){
+function roundOver() {
 
-    if (playerTotal > targetNumber){
+    if (playerTotal > targetNumber) {
         losses++;
         alert("Sorry, you lost!!");
         $("#losses").text("Total losses: " + losses)
+        $("#mastertotal").css({
+            "opacity": '0'
+        });
+
+        $("#smoke").css({
+            "opacity": '1'
+        });
         startGame();
     }
-    
-    else if(playerTotal === targetNumber){
+
+    else if (playerTotal === targetNumber) {
         wins++;
         alert("You Win!!!");
         $("#wins").text("Total wins: " + wins);
+        $("#mastertotal").css({
+            "opacity": '0'
+        });
+
+        $("#smoke").css({
+            "opacity": '1'
+        });
         startGame();
-    }  
+    }
 }
 
 startGame();
